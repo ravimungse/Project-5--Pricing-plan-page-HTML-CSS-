@@ -7,60 +7,62 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    .pricing-container{
+    body {
+      font-family: 'Sono', sans-serif;
+    }
+
+    .pricing-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 20px;
-      text-align: center;  
-      height: 100vh;    
+      height: 100vh;
+      gap: 2rem;
     }
-    .pricing-plan{
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
+
+    .pricing-plan {
+      flex: 1;
+      max-width: 400px;
       padding: 20px;
-      background-color: rgb(221, 217, 217);
-      align-items: center;
-      border-radius: 20px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      text-align: center;
     }
-    .plan-title{
-      font-size: 20px;
+
+    .plan-title {
+      font-size: 24px;
       font-weight: bold;
-      padding-bottom: 10px;
-      color: rgb(0, 0, 0);
-      filter: 10px black;
+      margin-bottom: 10px;
     }
-    .plan-features{
+
+    .plan-price {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .plan-features {
       list-style: none;
-      padding: 0px;
-      margin: 0px;
+      padding: 0;
+      margin: 0;
     }
-    .plan-features li{
-      padding-bottom: 10px;
+
+    .plan-features li {
+      margin-bottom: 20px;
     }
-    .plan-button{
-      width: 5rem;
-      height: 2rem;
-      font-size: 1rem;
-      align-items: center;
-      color: white;
-      background-color: rgb(84, 84, 255);
-      border-radius: 10px;
-      border-color: whitesmoke;
+
+    .plan-button {
+      padding: 10px;
+      background-color: #ff6600;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
     }
-    h1{
-      font-size: 3rem;
-      font-weight: bolder;
-      background-image: url(./creative\ back.jpg);
-      background-size: cover;
-      background-position: center;
-      background-clip: text;
-      -webkit-background-clip: text;
-    color: transparent;
-    }
-      /* Hint: What can you do with a media query and flexbox? */
+
     @media (max-width: 1250px) {
+      .pricing-container {
+        flex-direction: column;
+        height: 100%;
+      }
     }
   </style>
 </head>
@@ -69,7 +71,7 @@
   <div class="pricing-container">
     <div class="pricing-plan">
       <div class="plan-title">Basic</div>
-      <div class="plan-price"><h1>$9.99/month</h1></div>
+      <div class="plan-price">$11.99/month</div>
       <ul class="plan-features">
         <li>✅ 10GB Storage</li>
         <li>✅ 1 User</li>
@@ -79,7 +81,7 @@
     </div>
     <div class="pricing-plan">
       <div class="plan-title">Standard</div>
-      <div class="plan-price"><h1>$19.99/month</h1></div>
+      <div class="plan-price">$19.99/month</div>
       <ul class="plan-features">
         <li>✅ 50GB Storage</li>
         <li>✅ 5 Users</li>
@@ -89,7 +91,7 @@
     </div>
     <div class="pricing-plan">
       <div class="plan-title">Premium</div>
-      <div class="plan-price"><h1>$49.99/month</h1></div>
+      <div class="plan-price">$49.99/month</div>
       <ul class="plan-features">
         <li>✅ 100GB Storage</li>
         <li>✅ 10 Users</li>
